@@ -26,9 +26,8 @@
 
 <body class="bg-paper text-ink font-sans antialiased overflow-x-hidden">
 
-  <!-- Header & Navigation (Light Theme) -->
   <header id="main-header"
-    class="fixed top-0 inset-x-0 px-4 md:px-8 lg:px-16 xl:px-24 z-50 bg-transparent border-b border-transparent transition-all duration-300">
+    class="fixed top-0 inset-x-0 px-4 md:px-8 lg:px-16 xl:px-24 z-40 bg-transparent border-b border-transparent transition-all duration-300">
     <nav class="py-6 flex items-center justify-between">
 
       <div class="flex flex-col">
@@ -44,7 +43,7 @@
         <a href="#home" class="relative pb-1 transition-colors hover:text-paper">Home</a>
         <a href="#about" class="relative pb-1 transition-colors hover:text-paper">About</a>
         <a href="#journey" class="relative pb-1 transition-colors hover:text-paper">Journey</a>
-        <a href="#ventures" class="relative pb-1 transition-colors hover:text-paper">Ventures</a>
+        <a href="#vision" class="relative pb-1 transition-colors hover:text-paper">Vision</a>
         <a href="#insights" class="relative pb-1 transition-colors hover:text-paper">Insights</a>
         <a href="#contact" class="relative pb-1 transition-colors hover:text-paper">Contact</a>
       </div>
@@ -68,60 +67,58 @@
         </svg>
       </button>
     </nav>
-
-    <!-- Mobile Menu Backdrop -->
-    <div id="mobile-backdrop"
-      class="fixed inset-0 bg-ink/80 backdrop-blur-sm z-40 hidden opacity-0 transition-opacity duration-300 ease-in-out lg:hidden">
-    </div>
-
-    <!-- Mobile Menu Drawer -->
-    <div id="mobile-drawer"
-      class="fixed inset-y-0 right-0 w-[85%] sm:w-[350px] bg-ink border-l border-paper/10 shadow-2xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden flex flex-col">
-
-      <!-- Drawer Header -->
-      <div class="px-6 py-6 flex justify-between items-center border-b border-paper/5">
-        <span class="text-lg font-bold text-paper tracking-tight">Menu</span>
-        <button id="close-menu-btn" class="text-paper/70 hover:text-paper focus:outline-none transition-colors"
-          aria-label="Close navigation menu">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-      </div>
-
-      <!-- Drawer Links -->
-      <nav class="flex-1 px-6 py-8 flex flex-col gap-6 overflow-y-auto">
-        <a href="#home"
-          class="mobile-link text-base font-extralight tracking-wide text-paper/80 hover:text-paper transition-colors">Home</a>
-        <a href="#about"
-          class="mobile-link text-base font-extralight tracking-wide text-paper/80 hover:text-paper transition-colors">About</a>
-        <a href="#journey"
-          class="mobile-link text-base font-extralight tracking-wide text-paper/80 hover:text-paper transition-colors">Journey</a>
-        <a href="#ventures"
-          class="mobile-link text-base font-extralight tracking-wide text-paper/80 hover:text-paper transition-colors">Ventures</a>
-        <a href="#insights"
-          class="mobile-link text-base font-extralight tracking-wide text-paper/80 hover:text-paper transition-colors">Insights</a>
-        <a href="#contact"
-          class="mobile-link text-base font-extralight tracking-wide text-paper/80 hover:text-paper transition-colors">Contact</a>
-      </nav>
-
-      <!-- Drawer Footer -->
-      <div class="px-6 py-8 border-t border-paper/5">
-        <a href="#contact"
-          class="mobile-link group flex items-center justify-center gap-2 w-full py-3.5 bg-paper text-ink text-sm font-bold rounded hover:bg-paper/90 transition-all duration-300">
-          Connect With Me
-          <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none"
-            stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-          </svg>
-        </a>
-      </div>
-
-    </div>
   </header>
 
-  <main id="home">
+  <div id="mobile-backdrop"
+    class="fixed inset-0 bg-ink/80 backdrop-blur-sm z-[50] hidden opacity-0 transition-opacity duration-300 ease-in-out lg:hidden">
+  </div>
 
+  <!-- Mobile Menu Drawer -->
+  <div id="mobile-drawer"
+    class="fixed inset-y-0 right-0 w-[85%] sm:w-[350px] bg-ink border-l border-paper/10 shadow-2xl z-[60] transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden flex flex-col">
+
+    <!-- Drawer Header -->
+    <div class="px-6 py-6 flex justify-between items-center border-b border-paper/5">
+      <span class="text-lg font-bold text-paper tracking-tight">Menu</span>
+      <button id="close-menu-btn" class="text-paper/70 hover:text-paper focus:outline-none transition-colors"
+        aria-label="Close navigation menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Drawer Links -->
+    <nav class="flex-1 px-6 py-8 flex flex-col gap-6 overflow-y-auto">
+      <a href="#home"
+        class="mobile-link text-base font-extralight tracking-wide text-paper/80 hover:text-paper transition-colors">Home</a>
+      <a href="#about"
+        class="mobile-link text-base font-extralight tracking-wide text-paper/80 hover:text-paper transition-colors">About</a>
+      <a href="#journey"
+        class="mobile-link text-base font-extralight tracking-wide text-paper/80 hover:text-paper transition-colors">Journey</a>
+      <a href="#vision"
+        class="mobile-link text-base font-extralight tracking-wide text-paper/80 hover:text-paper transition-colors">Vision</a>
+      <a href="#insights"
+        class="mobile-link text-base font-extralight tracking-wide text-paper/80 hover:text-paper transition-colors">Insights</a>
+      <a href="#contact"
+        class="mobile-link text-base font-extralight tracking-wide text-paper/80 hover:text-paper transition-colors">Contact</a>
+    </nav>
+
+    <!-- Drawer Footer -->
+    <div class="px-6 py-8 border-t border-paper/5">
+      <a href="#contact"
+        class="mobile-link group flex items-center justify-center gap-2 w-full py-3.5 bg-paper text-ink text-sm font-bold rounded hover:bg-paper/90 transition-all duration-300">
+        Connect With Me
+        <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor"
+          viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+        </svg>
+      </a>
+    </div>
+
+  </div>
+
+  <main id="home">
     <section
       class="relative min-h-screen flex flex-col justify-center px-4 md:px-8 lg:px-16 xl:px-24 pt-28 pb-20 bg-ink overflow-hidden">
 
@@ -140,34 +137,34 @@
       <!-- Left Hero Content -->
       <div class="relative z-10 w-full lg:w-[45%] mt-8 lg:mt-0">
 
-        <!-- Top Pill Badge -->
         <div
           class="inline-flex items-center gap-2.5 px-4 py-1.5 border border-paper/10 rounded-full mb-6 backdrop-blur-sm bg-ink/40">
           <span class="text-[8px] md:text-[9px] font-semibold text-paper/60 tracking-[0.2em] uppercase">Vision</span>
           <span class="text-paper/20 text-[9px]">|</span>
           <span
-            class="text-[8px] md:text-[9px] font-semibold text-paper/60 tracking-[0.2em] uppercase">Leadership</span>
+            class="text-[8px] md:text-[9px] font-semibold text-paper/60 tracking-[0.2em] uppercase">Determination</span>
           <span class="text-paper/20 text-[9px]">|</span>
-          <span class="text-[8px] md:text-[9px] font-semibold text-paper/60 tracking-[0.2em] uppercase">Impact</span>
+          <span
+            class="text-[8px] md:text-[9px] font-semibold text-paper/60 tracking-[0.2em] uppercase">Achievement</span>
         </div>
 
-        <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl text-paper leading-[1.05] mb-6 tracking-tight">
-          A Story of Possible.<br>
-          From Impossible.
+        <h1 class="font-serif text-4xl md:text-5xl  text-paper leading-[1.05] mb-6 tracking-tight">
+          GRIDHIK GK — FROM IMPOSSIBLE
+          TO POSSIBLE.
         </h1>
         <div class="w-12 h-px bg-paper/30 mb-6"></div>
 
-        <p class="text-paper/70 text-[13px] md:text-sm leading-loose tracking-wider font-light max-w-xl mb-8">
-          From arriving in Mumbai and earning ₹50 a day as a young Malayali, to building a vision for the future of
-          global finance. Founder of One Banking Solution and Latitude Logistics, built on the power of never
-          giving up.
+        <p class="text-paper text-[13px] md:text-base leading-loose tracking-wider font-light max-w-xl mb-8">
+          Gridhik GK is not just a name. It is a story of vision, determination, and achievement. Considered impossible
+          by many, GK chose to see beyond limitations. With a clear vision, unwavering determination, and relentless
+          hard work, what once seemed impossible began to take shape.
         </p>
 
         <!-- Buttons -->
         <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
-          <a href="#ventures"
+          <a href="#vision"
             class="group flex items-center justify-center gap-2 px-7 py-3.5 bg-paper text-ink rounded text-[13px] font-bold hover:bg-paper/90 transition-all w-full sm:w-auto">
-            View My Ventures
+            View My Vision
             <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none"
               stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -209,7 +206,7 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                 d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
             </svg>
-            Cash Logistics
+            Cash Logistics & Valuable Cargo
           </div>
 
           <div class="hidden md:block w-px h-3 bg-paper/20"></div>
@@ -226,38 +223,8 @@
       </div>
 
       <!-- Right Side -->
-      <div class="hidden xl:flex absolute top-1/2 right-12 -translate-y-1/2 flex-col items-end gap-5 z-10 w-[550px]">
-
-        <div class="relative w-full h-[220px] mb-2">
-          <svg class="absolute inset-0 w-full h-full" viewBox="0 0 500 220" fill="none">
-            <path d="M 50 160 Q 250 140 450 30" stroke="rgba(255,255,255,0.9)" stroke-width="1.5" fill="none"
-              stroke-linecap="round" />
-            <path d="M 438 35 L 451 29 L 442 45" stroke="rgba(255,255,255,0.9)" stroke-width="1.5" fill="none"
-              stroke-linecap="round" stroke-linejoin="round" />
-
-            <circle cx="50" cy="160" r="3" fill="white" />
-            <circle cx="185" cy="116" r="3" fill="white" />
-            <circle cx="320" cy="65" r="3" fill="white" />
-          </svg>
-          <div class="absolute top-[130px] left-[35px] text-paper text-center">
-            <div class="text-sm font-serif leading-none mb-1">01</div>
-            <div class="text-[7px] uppercase tracking-widest text-paper/60">The Beginning</div>
-          </div>
-          <div class="absolute top-[75px] left-[165px] text-paper text-center">
-            <div class="text-[15px] font-serif leading-none mb-1">02</div>
-            <div class="text-[7px] uppercase tracking-widest text-paper/60">Latitude Logistics</div>
-          </div>
-          <div class="absolute top-[25px] left-[290px] text-paper text-center">
-            <div class="text-[15px] font-serif leading-none mb-1">03</div>
-            <div class="text-[7px] uppercase tracking-widest text-paper/60">One Banking Solution</div>
-          </div>
-          <div class="absolute -top-[15px] left-[420px] text-paper text-center">
-            <div class="text-[15px] font-serif leading-none mb-1">04</div>
-            <div class="text-[7px] uppercase tracking-widest text-paper/60">Global Finance</div>
-          </div>
-        </div>
-
-        <div
+      <div class="hidden xl:flex absolute bottom-20 right-12 -translate-y-1/2 flex-col items-end gap-5 z-10 w-[550px]">
+        <!-- <div
           class="w-full bg-ink/30 backdrop-blur-md border border-paper/10 rounded-xl p-5 flex justify-between items-center text-paper shadow-[0_8px_30px_rgb(0,0,0,0.4)]">
           <div class="text-center px-2">
             <div class="text-xl font-serif mb-1.5">01</div>
@@ -278,138 +245,142 @@
             <div class="text-xl font-serif mb-1.5">04</div>
             <div class="text-[8px] text-paper/60 uppercase tracking-widest leading-relaxed">Entrepreneur</div>
           </div>
-        </div>
+        </div> -->
 
         <div
           class="w-full bg-ink/30 backdrop-blur-md border border-paper/10 rounded-xl px-6 py-5 text-paper shadow-[0_8px_30px_rgb(0,0,0,0.4)] flex flex-col items-center">
-          <p class="font-serif italic text-[13px] text-paper/90 mb-2 text-center tracking-wider">&#8220; Your starting
-            point does not determine your destination. &#8221;</p>
+          <p class="font-serif italic text-[13px] text-paper/90 mb-2 text-center tracking-wider">&#8220; From impossible
+            to possible — not by chance, but by vision, hard work, and the courage to achieve what others believed could
+            not be achieved. &#8221;</p>
           <p class="text-right w-full font-serif italic text-[12px] text-paper/60">- Gridhik GK</p>
         </div>
 
       </div>
     </section>
 
-    <section id="about" class="py-20 md:py-24 px-4 md:px-8 lg:px-16 xl:px-24 bg-paper text-ink border-b border-ink/5">
-      <div class="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-24">
+    <section id="about"
+      class="py-20 md:py-24 px-4 md:px-8 lg:px-16 xl:px-24 bg-black text-white border-b border-white/10">
+      <div class="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-16">
 
-        <!-- Left Column -->
-        <div class="flex flex-col justify-start">
+        <!-- Left Column: Origins & Philosophy -->
+        <div class="flex flex-col justify-start lg:col-span-5 xl:col-span-5 lg:sticky lg:top-24 h-max">
 
           <div class="mb-6">
-
-            <span class="text-[10px] md:text-xs font-bold text-ink tracking-widest uppercase">About Gridhik
-              GK</span>
-            <div class="w-8 h-[2px] bg-ink mt-1"></div>
+            <span class="text-[10px] md:text-xs font-bold text-white tracking-widest uppercase">The Story</span>
+            <div class="w-8 h-[2px] bg-white mt-2"></div>
           </div>
-          <h2 class="font-serif text-4xl md:text-5xl lg:text-[3.5rem] text-ink leading-[1.1] mb-4">
-            A Story Of Possible
+
+          <h2 class="font-serif text-4xl md:text-5xl lg:text-[3.5rem] text-white leading-[1.1] mb-8">
+            A Story Of Impossible
             <br />
-            <span class=" font-normal"> From Impossible</span>
+            <span class="italic font-normal opacity-90">From Possible</span>
           </h2>
-          <p class="text-[9px] md:text-[10px] tracking-[0.25em] uppercase text-ink/50 font-semibold mb-6">
-            Same City. A Different Mindset.
+
+          <p class="text-sm md:text-base text-white/90 leading-relaxed font-normal tracking-wider mb-6">
+            Born in Kochi, Gridhik GK experienced a childhood filled with challenges. Without the support and care he
+            needed from his family, his aunt took the responsibility of sending him to Mumbai for his education.
           </p>
 
-          <h3 class="font-serif text-3xl md:text-4xl text-ink mb-4">Mumbai.</h3>
-          <p class="text-sm md:text-base text-ink leading-relaxed font-normal tracking-wider mb-5">
-            A city where millions arrive with dreams, but only a few have the courage, resilience, and relentless
-            determination to turn those dreams into reality.
-          </p>
-          <p class="text-sm md:text-base text-ink leading-relaxed font-normal tracking-wider mb-5">
-            For Gridhik GK, widely known simply as GK, Mumbai was not just a city. It was the place where his journey
-            began.
-          </p>
-          <p class="text-sm md:text-base text-ink leading-relaxed font-normal tracking-wider mb-12">
-            His story did not begin in a boardroom, with investors behind him or a family business waiting to be
-            inherited.
+          <p class="text-sm md:text-base text-white/90 leading-relaxed font-normal tracking-wider mb-10">
+            Mumbai became more than just a place where he studied. It became the place that made him strong.
           </p>
 
-          <!-- Second Story Block -->
-          <h3 class="font-serif text-3xl md:text-4xl text-ink mb-5">It began with ₹50 a day.</h3>
-          <p class="text-sm md:text-base text-ink leading-relaxed font-normal tracking-wider pr-0 xl:pr-12">
-            A young Malayali in Mumbai, GK started his working life in small shops, learning the most important lessons
-            that no business school could teach: the value of hard work, the dignity of every job, the importance of
-            people, and the power of never giving up.
+          <!-- Highlight Block -->
+          <div class="p-6 border-l-2 border-white bg-white/5 mb-8">
+            <p class="font-serif text-lg  text-white tracking-wider">
+              " Today, the story of GK represents one powerful belief: What others call impossible can become possible
+              when vision, determination, hard work, and an unbreakable goal come together. "
+            </p>
+          </div>
+
+          <p class="text-sm md:text-base text-white leading-relaxed font-semibold tracking-wider uppercase text-[11px]">
+            This is not just a story of where he came from.<br />
+            It is the story of where vision can take a person.
           </p>
+
         </div>
 
-        <!-- Right Column -->
-        <div class="flex flex-col lg:pl-10 relative mt-8 lg:mt-0">
+        <!-- Right Column: The Journey Timeline -->
+        <div class="flex flex-col relative mt-8 lg:mt-0 lg:col-span-7 xl:col-span-7">
 
-          <div class="relative">
-            <div class="absolute left-[3px] top-3 bottom-0 w-px bg-ink/20 z-0"></div>
+          <div class="relative pt-2">
+            <!-- Continuous Timeline Line -->
+            <div class="absolute left-[3px] top-3 bottom-0 w-px bg-white/20 z-0"></div>
 
-            <div class="flex gap-5 md:gap-6 mb-12 relative z-10">
-              <div class="pt-2.5 bg-paper h-max rounded-full">
-                <div class="w-1.5 h-1.5 rounded-full bg-ink"></div>
+            <!-- Step 01 -->
+            <div class="flex gap-5 md:gap-8 mb-14 relative z-10">
+              <div class="pt-2.5 bg-black h-max rounded-full">
+                <div class="w-1.5 h-1.5 rounded-full bg-white"></div>
               </div>
               <div class="flex flex-col items-center pt-0.5 shrink-0 w-8">
-                <span class="font-serif text-2xl text-ink">01</span>
-                <div class="w-4 h-px bg-ink/30 mt-3"></div>
+                <span class="font-serif text-2xl text-white">01</span>
+                <div class="w-4 h-px bg-white/30 mt-3"></div>
               </div>
               <div class="flex-1 pt-0.5">
-                <h4 class="font-serif text-2xl text-ink mb-3">Small Shops</h4>
-                <p class="text-sm md:text-[15px] text-ink leading-relaxed font-normal tracking-wider">
-                  A young Malayali in Mumbai, GK started his working life in small shops, learning the most important
-                  lessons that no business school could teach: the value of hard work, the dignity of every job, the
-                  importance of people, and the power of never giving up.
+                <h4 class="font-serif text-2xl text-white mb-4">Doubts Into Motivation</h4>
+                <p class="text-sm md:text-[15px] text-white/80 leading-relaxed font-normal tracking-wider">
+                  From an early age, Gridhik faced questions that could have limited his confidence: <span
+                    class="italic">“How will you earn?” “How will you get a job?” “What will you do in life?”</span>
+                  Instead of allowing those questions to define his future, he turned them into motivation.
                 </p>
               </div>
             </div>
 
-            <div class="flex gap-5 md:gap-6 mb-12 relative z-10">
-              <div class="pt-2.5 bg-paper h-max rounded-full">
-                <div class="w-1.5 h-1.5 rounded-full bg-ink"></div>
+            <!-- Step 02 -->
+            <div class="flex gap-5 md:gap-8 mb-14 relative z-10">
+              <div class="pt-2.5 bg-black h-max rounded-full">
+                <div class="w-1.5 h-1.5 rounded-full bg-white"></div>
               </div>
               <div class="flex flex-col items-center pt-0.5 shrink-0 w-8">
-                <span class="font-serif text-2xl text-ink">02</span>
-                <div class="w-4 h-px bg-ink/30 mt-3"></div>
+                <span class="font-serif text-2xl text-white">02</span>
+                <div class="w-4 h-px bg-white/30 mt-3"></div>
               </div>
               <div class="flex-1 pt-0.5">
-                <h4 class="font-serif text-2xl text-ink mb-3">Hotel Industry</h4>
-                <p class="text-sm md:text-[15px] text-ink leading-relaxed font-normal tracking-wider">
-                  From small shops, his journey took him into the hotel industry. He started at the ground level,
-                  working as a cleaner. There were no shortcuts. He learned the business from the bottom up—observing
-                  customers, understanding operations, managing people, solving problems and, most importantly,
-                  understanding what it takes to survive and grow in one of the world's most demanding cities.
+                <h4 class="font-serif text-2xl text-white mb-4">A Powerful Hunger</h4>
+                <p class="text-sm md:text-[15px] text-white/80 leading-relaxed font-normal tracking-wider">
+                  His difficult childhood created a powerful hunger to earn, succeed, and build something meaningful.
+                  Deep within him was a clear goal — to create something that could make a difference in the world.
                 </p>
               </div>
             </div>
 
-            <div class="flex gap-5 md:gap-6 mb-12 relative z-10">
-              <div class="pt-2.5 bg-paper h-max rounded-full">
-                <div class="w-1.5 h-1.5 rounded-full bg-ink"></div>
+            <!-- Step 03 -->
+            <div class="flex gap-5 md:gap-8 mb-14 relative z-10">
+              <div class="pt-2.5 bg-black h-max rounded-full">
+                <div class="w-1.5 h-1.5 rounded-full bg-white"></div>
               </div>
               <div class="flex flex-col items-center pt-0.5 shrink-0 w-8">
-                <span class="font-serif text-2xl text-ink">03</span>
-                <div class="w-4 h-px bg-ink/30 mt-3"></div>
+                <span class="font-serif text-2xl text-white">03</span>
+                <div class="w-4 h-px bg-white/30 mt-3"></div>
               </div>
               <div class="flex-1 pt-0.5">
-                <h4 class="font-serif text-2xl text-ink mb-3">Step by Step</h4>
-                <p class="text-sm md:text-[15px] text-ink leading-relaxed font-normal tracking-wider">
-                  Step by step, he moved forward.
+                <h4 class="font-serif text-2xl text-white mb-4">Starting From The Beginning</h4>
+                <p class="text-sm md:text-[15px] text-white/80 leading-relaxed font-normal tracking-wider">
+                  His journey began as a trainee in hotel management. Starting from the beginning, he worked through
+                  every challenge with determination. He became a successful employee.
                 </p>
               </div>
             </div>
 
-            <div class="flex gap-5 md:gap-6 relative z-10">
-              <div class="pt-2.5 bg-paper h-max rounded-full">
-                <div class="w-1.5 h-1.5 rounded-full bg-ink"></div>
+            <!-- Step 04 -->
+            <div class="flex gap-5 md:gap-8 relative z-10">
+              <div class="pt-2.5 bg-black h-max rounded-full">
+                <div class="w-1.5 h-1.5 rounded-full bg-white"></div>
               </div>
               <div class="flex flex-col items-center pt-0.5 shrink-0 w-8">
-                <span class="font-serif text-2xl text-ink">04</span>
-                <div class="w-4 h-px bg-ink/30 mt-3"></div>
+                <span class="font-serif text-2xl text-white">04</span>
+                <div class="w-4 h-px bg-white/30 mt-3"></div>
               </div>
               <div class="flex-1 pt-0.5">
-                <h4 class="font-serif text-2xl text-ink mb-3">Cleaner. Worker. Manager. Entrepreneur.</h4>
-                <p class="text-sm md:text-[15px] text-ink leading-relaxed font-normal tracking-wider">
-                  What looked like a modest beginning was quietly becoming the foundation of something much bigger.
+                <h4 class="font-serif text-2xl text-white mb-4">A Craze For Challenges</h4>
+                <p class="text-sm md:text-[15px] text-white/80 leading-relaxed font-normal tracking-wider">
+                  But he was never satisfied with a salaried job. His goal was way bigger. Nothing came easily, but he
+                  never stopped moving forward. Challenges was a craze for him. He welcomed them.
                 </p>
               </div>
             </div>
+
           </div>
-
         </div>
 
       </div>
@@ -465,12 +436,10 @@
         </div>
       </div>
 
-      <!-- Right Typography Overlays (Hidden on mobile, visible on desktop) -->
       <div
         class="relative z-20 hidden lg:flex flex-col justify-between w-[40%] pr-12 xl:pr-24 py-24 pointer-events-none">
 
         <div class="flex flex-col w-full items-end h-full">
-          <!-- Top Right Block -->
           <div class="flex flex-col items-start text-left w-48 mt-4">
             <p class="text-[11px] xl:text-xs tracking-[0.25em] uppercase text-ink/90 leading-loose font-semibold">
               A City<br />
@@ -480,7 +449,6 @@
             <div class="w-8 h-[1px] bg-ink/50 mt-5"></div>
           </div>
 
-          <!-- Middle Right Block -->
           <div class="flex flex-col items-start text-left space-y-4 mt-20 w-48">
             <span class="text-[9px] xl:text-[10px] tracking-[0.25em] uppercase text-ink/80 font-bold">Resilience</span>
             <span class="text-[9px] xl:text-[10px] tracking-[0.25em] uppercase text-ink/80 font-bold">Opportunity</span>
@@ -489,10 +457,8 @@
               class="text-[9px] xl:text-[10px] tracking-[0.25em] uppercase text-ink/80 font-bold">Possibilities</span>
           </div>
 
-          <!-- Spacer to push the final text to the bottom -->
           <div class="flex-grow"></div>
 
-          <!-- Bottom Right Block (White text for water contrast) -->
           <div class="mb-4 border-b border-paper/40 pb-3 text-right">
             <p
               class="text-[8px] xl:text-[9px] tracking-[0.25em] uppercase text-paper font-semibold drop-shadow-md leading-relaxed">
@@ -507,27 +473,6 @@
 
     <section id="journey"
       class="bg-ink text-paper py-20 md:py-24 px-4 md:px-8 lg:px-16 xl:px-24 border-b border-paper/10">
-
-      <div class="flex flex-col lg:flex-row gap-16 lg:gap-0 mb-12">
-        <div class="w-full lg:w-1/2 lg:pr-16 flex flex-col justify-center">
-          <h2 class="font-serif text-4xl md:text-5xl lg:text-[3.5rem] text-paper leading-tight mb-8">
-            Think bigger.
-            <br />
-            <span class="italic font-normal">Move faster. Build trust.</span>
-          </h2>
-          <div class="w-10 h-[1px] bg-paper mb-8"></div>
-
-        </div>
-
-        <!-- <div class="w-full lg:w-1/2 lg:pl-16 flex flex-col justify-center">
-          <div class="font-serif text-6xl text-paper/30 leading-none h-10 mb-2">&#8220;</div>
-          <h3 class="font-serif italic text-2xl md:text-3xl lg:text-[2rem] text-paper leading-snug mb-8 font-normal">
-            Why accept the way things have always been done when you can imagine a better way?
-          </h3>
-          <div class="w-10 h-[1px] bg-paper/30 mb-6"></div>
-
-        </div> -->
-      </div>
 
       <div class="mx-auto grid grid-cols-1 md:grid-cols-2">
 
@@ -573,7 +518,7 @@
             <span class="font-serif text-4xl text-paper/40 leading-none">02</span>
             <span class="text-[8px] tracking-[0.2em] text-paper/50 uppercase">A Bold Step Into The Future</span>
           </div>
-          <h3 class="font-serif text-3xl text-paper mb-6 leading-tight">Beyond Logistics:<br>A Bigger Dream</h3>
+          <h3 class="font-serif text-3xl text-paper mb-6 leading-tight">Beyond Logistics</h3>
           <div class="text-sm md:text-base text-paper tracking-wider font-light leading-relaxed space-y-4">
             <p>
               But for GK, business was never only about building companies. It was always about building possibilities.
@@ -679,9 +624,215 @@
       </div>
     </section>
 
-    <section id="ventures" class="py-20 px-4 md:px-6 lg:px-24 bg-paper text-ink relative z-10 border-b border-ink/5">
+    <section id="vision"
+      class="py-20 md:py-24 px-4 md:px-8 lg:px-16 xl:px-24 bg-black text-white border-b border-white/10">
+      <div class="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-16 xl:gap-24">
 
-      <!-- Header Section -->
+        <!-- Left Column: The Vision -->
+        <div class="flex flex-col justify-start lg:col-span-5 xl:col-span-5 lg:sticky lg:top-24 h-max">
+
+          <div class="mb-6">
+            <span class="text-[10px] md:text-xs font-bold text-white tracking-widest uppercase">The Vision</span>
+            <div class="w-8 h-[2px] bg-white mt-2"></div>
+          </div>
+
+          <h2 class="font-serif text-4xl md:text-5xl lg:text-[3.5rem] text-white leading-[1.1] mb-8">
+            Building The
+            <br />
+            <span class="italic font-normal opacity-90">Unbelievable</span>
+          </h2>
+
+          <p class="text-sm md:text-base text-white/90 leading-relaxed font-normal tracking-wider mb-6">
+            For Gridhik, success was never simply about getting a job or building one company. His vision was much
+            bigger:
+          </p>
+
+          <!-- Highlight Block -->
+          <div class="p-6 border-l-2 border-white bg-white/5 mb-8">
+            <p class="font-serif text-lg md:text-xl text-white leading-snug">
+              To create, build, and achieve what others believed could not be done.
+            </p>
+          </div>
+
+          <p class="text-sm md:text-base text-white/90 leading-relaxed font-normal tracking-wider">
+            That vision gradually became reality through a growing portfolio of organisations across different sectors.
+          </p>
+
+        </div>
+
+        <!-- Right Column: The Organisations (Portfolio) -->
+        <div class="flex flex-col mt-8 lg:mt-0 lg:col-span-7 xl:col-span-7">
+
+          <!-- 713 Organisation -->
+          <div class="border-t border-white/20 pt-8 pb-12">
+            <span class="text-[10px] md:text-xs font-bold text-white/50 tracking-widest uppercase mb-4 block">The
+              Foundation</span>
+            <h3 class="font-serif text-3xl md:text-4xl text-white mb-4">713 Organisation</h3>
+            <p class="text-sm md:text-[15px] text-white/80 leading-relaxed font-normal tracking-wider">
+              One of the significant chapters in his journey is 713 Organisation.
+            </p>
+          </div>
+
+          <!-- Latitude Logistics -->
+          <div class="border-t border-white/20 pt-8 pb-12">
+            <span class="text-[10px] md:text-xs font-bold text-white/50 tracking-widest uppercase mb-4 block">Est.
+              2017</span>
+            <h3 class="font-serif text-3xl md:text-4xl text-white mb-4">Latitude Logistics</h3>
+            <p class="text-sm md:text-[15px] text-white/80 leading-relaxed font-normal tracking-wider mb-4">
+              Started in 2017, initially as a medical logistics company. Over time, it evolved into a premium cash
+              logistics and valuable cargo business.
+            </p>
+            <p class="text-sm md:text-[15px] text-white/80 leading-relaxed font-normal tracking-wider">
+              What began as one idea continued to grow into something much larger.
+            </p>
+          </div>
+
+          <!-- One Banking Solution -->
+          <div class="border-t border-white/20 pt-8 pb-12">
+            <span class="text-[10px] md:text-xs font-bold text-white/50 tracking-widest uppercase mb-4 block">Est.
+              2020</span>
+            <h3 class="font-serif text-3xl md:text-4xl text-white mb-4">One Banking Solution</h3>
+            <p class="text-sm md:text-[15px] text-white/80 leading-relaxed font-normal tracking-wider mb-4">
+              In 2020, another major vision began — One Banking Solution. The concept was built around a vision for a
+              decentralised banking solution and has continued to evolve day by day.
+            </p>
+            <p class="text-sm md:text-[15px] text-white/80 leading-relaxed font-normal tracking-wider">
+              For Gridhik, this is not simply a company. It is a long-term vision that he continues to build, develop,
+              and transform with the belief that the future of financial solutions can be different from what the world
+              knows today.
+            </p>
+          </div>
+
+          <!-- Beyond One Industry -->
+          <div class="border-t border-white/20 pt-8 pb-8">
+            <span class="text-[10px] md:text-xs font-bold text-white/50 tracking-widest uppercase mb-4 block">The
+              Future</span>
+            <h3 class="font-serif text-3xl md:text-4xl text-white mb-4">Beyond One Industry</h3>
+            <p class="text-sm md:text-[15px] text-white/80 leading-relaxed font-normal tracking-wider mb-4">
+              Gridhik's vision extends beyond logistics and banking. His organisations and ventures have expanded into
+              areas including logistics, real estate, and other emerging sectors, with more initiatives continuing to
+              take shape.
+            </p>
+            <p class="text-sm md:text-[15px] text-white/80 leading-relaxed font-normal tracking-wider">
+              Each organisation represents another step toward a much larger goal.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section id="message"
+      class="relative py-16 md:py-20 px-6 md:px-12 lg:px-16 xl:px-24 bg-black text-white overflow-hidden">
+
+      <div class="absolute inset-0 z-0">
+        <img src="/images/message.webp" alt="Cinematic Light Beam"
+          class="w-full h-full object-cover object-right opacity-80" />
+
+        <div class="absolute inset-0 bg-gradient-to-r from-black via-black/95 to-transparent w-full md:w-3/4 lg:w-2/3">
+        </div>
+
+        <div class="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black opacity-60"></div>
+      </div>
+
+      <div class="relative z-10 mx-auto w-full">
+
+        <div class="flex items-center gap-4 mb-8 md:mb-6">
+          <div class="w-6 h-px bg-white/30"></div>
+          <span class="text-[9px] md:text-[10px] text-white/50 uppercase tracking-[0.3em] font-medium">The
+            Message</span>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 items-start lg:items-center gap-10 lg:gap-12">
+          <p
+            class="text-sm md:text-base leading-[2.2] md:leading-[2] max-w-2xl text-white/80 font-normal tracking-wide">
+            Gridhik GK's journey is a reminder that formal education does not
+            define the limits of a person's potential. A person can begin with
+            very little, face difficult circumstances, and still build a powerful
+            future through vision, courage, determination, hard work, and an
+            unwavering goal.
+          </p>
+
+          <div class="pl-5 md:pl-8 border-l border-white/20 mt-2 lg:mt-0">
+            <p class="font-serif text-2xl lg:text-[2rem] text-white leading-[1.35] max-w-[620px]">
+              He did not choose to follow <br class="hidden md:block" />
+              what everyone else considered possible. <br />
+              <span class="italic text-white/70 block mt-2">He chose to challenge the impossible.</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-16 md:mt-24">
+
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-x-6 md:gap-x-10 gap-y-12 lg:gap-y-0 mb-16 lg:mb-20">
+
+            <div class="flex flex-col gap-3 md:gap-4 pr-0 xl:pr-6">
+              <div class="flex items-center w-full gap-3 md:gap-4">
+                <span class="font-serif text-xl md:text-[1.75rem] text-white/90 tracking-wide">01</span>
+                <div class="flex-1 h-px bg-white/20 relative">
+                  <div class="absolute right-0 -top-[1.5px] w-1 h-1 bg-white/80 rounded-full"></div>
+                </div>
+              </div>
+              <p class="text-[11px] md:text-[13px] text-white/70 leading-relaxed max-w-[140px] md:max-w-[180px]">
+                A journey built<br>on vision.
+              </p>
+            </div>
+
+            <div class="flex flex-col gap-3 md:gap-4 pr-0 xl:pr-6">
+              <div class="flex items-center w-full gap-3 md:gap-4">
+                <span class="font-serif text-xl md:text-[1.75rem] text-white/90 tracking-wide">02</span>
+                <div class="flex-1 h-px bg-white/20 relative">
+                  <div class="absolute right-0 -top-[1.5px] w-1 h-1 bg-white/80 rounded-full"></div>
+                </div>
+              </div>
+              <p class="text-[11px] md:text-[13px] text-white/70 leading-relaxed max-w-[140px] md:max-w-[180px]">
+                A life shaped<br>by challenges.
+              </p>
+            </div>
+
+            <div class="flex flex-col gap-3 md:gap-4 pr-0 xl:pr-6">
+              <div class="flex items-center w-full gap-3 md:gap-4">
+                <span class="font-serif text-xl md:text-[1.75rem] text-white/90 tracking-wide">03</span>
+                <div class="flex-1 h-px bg-white/20 relative">
+                  <div class="absolute right-0 -top-[1.5px] w-1 h-1 bg-white/80 rounded-full"></div>
+                </div>
+              </div>
+              <p class="text-[11px] md:text-[13px] text-white/70 leading-relaxed max-w-[140px] md:max-w-[180px]">
+                A goal driven<br>by determination.
+              </p>
+            </div>
+
+            <div class="flex flex-col gap-3 md:gap-4 pr-0 xl:pr-6">
+              <div class="flex items-center w-full gap-3 md:gap-4">
+                <span class="font-serif text-xl md:text-[1.75rem] text-white/90 tracking-wide">04</span>
+                <div class="flex-1 h-px bg-white/20 relative">
+                  <div class="absolute right-0 -top-[1.5px] w-1 h-1 bg-white/80 rounded-full"></div>
+                </div>
+              </div>
+              <p class="text-[11px] md:text-[13px] text-white/70 leading-relaxed max-w-[160px] md:max-w-[220px]">
+                And a future that continues<br>to be built every day.
+              </p>
+            </div>
+
+          </div>
+
+          <div class="flex justify-start lg:justify-end mt-8 lg:mt-0">
+            <div class="flex items-center gap-4">
+              <span class="text-[8px] md:text-[9px] text-white/40 tracking-[0.25em] uppercase font-medium">
+                And that is what defines the story of Gridhik GK.
+              </span>
+              <div class="w-8 md:w-16 h-px bg-white/20"></div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- <section id="ventures" class="py-20 px-4 md:px-6 lg:px-24 bg-paper text-ink relative z-10 border-b border-ink/5">
+
       <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
         <div class="max-w-2xl">
           <div class="flex items-center gap-4 mb-4">
@@ -700,24 +851,18 @@
 
       </div>
 
-      <!-- Cards Container -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pb-8">
 
-        <!-- Card 1: Latitude Logistics -->
         <div
           class="bg-panel rounded-3xl p-8 flex flex-col md:flex-row items-center justify-between text-left shrink-0 border border-ink/5 hover:border-ink/20 transition-all duration-300 relative shadow-sm">
 
-          <!-- Logo -->
           <div class="w-full md:w-1/2 flex items-center justify-center p-4">
             <img src="/images/latitude-logo.jpeg" alt="Latitude Logistics Logo" class="w-auto h-56 object-contain" />
           </div>
 
-          <!-- Vertical Divider -->
           <div class="hidden md:block w-px h-24 bg-ink/10 mx-4"></div>
-          <!-- Horizontal Divider for Mobile -->
           <div class="block md:hidden w-full h-px bg-ink/10 my-6"></div>
 
-          <!-- Content -->
           <div class="w-full md:w-1/2 flex flex-col items-start pr-12 relative">
             <span class="text-[9px] tracking-widest uppercase font-bold text-ink/60 mb-3">
               Cash Logistics
@@ -730,7 +875,6 @@
             </p>
           </div>
 
-          <!-- Arrow Button -->
           <button
             class="absolute right-6 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full border border-ink/10 flex items-center justify-center text-ink hover:bg-ink/5 transition-colors cursor-pointer">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -739,22 +883,17 @@
           </button>
         </div>
 
-        <!-- Card 2: One Banking Solution -->
         <div
           class="bg-panel rounded-3xl p-8 flex flex-col md:flex-row items-center justify-between text-left shrink-0 border border-ink/5 hover:border-ink/20 transition-all duration-300 relative shadow-sm">
 
-          <!-- Logo -->
           <div class="w-full md:w-1/2 flex items-center justify-center p-4">
             <img src="/images/one-banking-logo.jpeg" alt="One Banking Solution Logo"
               class="w-auto h-56 object-contain" />
           </div>
 
-          <!-- Vertical Divider -->
           <div class="hidden md:block w-px h-24 bg-ink/10 mx-4"></div>
-          <!-- Horizontal Divider for Mobile -->
           <div class="block md:hidden w-full h-px bg-ink/10 my-6"></div>
 
-          <!-- Content -->
           <div class="w-full md:w-1/2 flex flex-col items-start pr-12 relative">
             <span class="text-[9px] tracking-widest uppercase font-bold text-ink/60 mb-3">
               Digital Banking
@@ -767,7 +906,6 @@
             </p>
           </div>
 
-          <!-- Arrow Button -->
           <button
             class="absolute right-6 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full border border-ink/10 flex items-center justify-center text-ink hover:bg-ink/5 transition-colors cursor-pointer">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -778,16 +916,13 @@
 
       </div>
 
-      <!-- Bottom Navigation & Pagination -->
       <div class="flex items-center justify-center relative mt-2 pb-6">
 
-        <!-- Pagination Bars -->
         <div class="flex items-center gap-2">
           <div class="w-6 h-1.5 bg-ink rounded-full"></div>
           <div class="w-2 h-1.5 bg-ink/20 rounded-full"></div>
         </div>
 
-        <!-- Navigation Arrows -->
         <div class="absolute right-0 flex gap-2">
           <button
             class="w-10 h-10 rounded-full border border-ink/10 flex items-center justify-center text-ink hover:bg-ink/5 transition-colors cursor-pointer">
@@ -804,7 +939,7 @@
         </div>
 
       </div>
-    </section>
+    </section> -->
 
     <section id="insights" class="relative w-full bg-ink overflow-hidden border-t border-paper/5">
       <div class="px-4 md:px-6 lg:px-24 mx-auto flex flex-col lg:flex-row items-stretch">
@@ -839,41 +974,44 @@
     </section>
   </main>
 
-  <!-- Footer & Contact Section (Dark Theme) -->
   <footer id="contact" class="pt-20 pb-8 px-4 md:px-6 lg:px-24 bg-ink text-paper border-t border-paper/10">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 mb-20">
 
       <div class="col-span-1 lg:col-span-4 flex flex-col justify-center">
-        <span class="text-[10px] md:text-xs font-bold text-paper/80 tracking-widest uppercase mb-4 block">
-          Let's Create Impact Together
-        </span>
-        <h2 class="font-serif text-4xl text-paper leading-tight mb-6">
-          Have an idea or looking for a partnership?
-        </h2>
-        <p class="text-paper/60 text-sm md:text-base leading-relaxed font-light pr-4">
-          I'm always open to discussing new opportunities and building something impactful together.
+
+        <div class="flex flex-col mb-4">
+          <a href="#home" class="text-xl md:text-2xl font-bold text-paper tracking-tight flex items-center gap-1">
+            Gridhik GK
+          </a>
+          <span class="text-[8px] md:text-[9px] text-paper/50 uppercase tracking-[0.2em] mt-1">
+            Entrepreneur • Investor • Founder
+          </span>
+        </div>
+        <p class="text-paper/60 text-sm  leading-relaxed font-light tracking-wider pr-4">
+          Today, the name stands as a powerful example of what can be achieved when vision is stronger than limitations,
+          goals are stronger than challenges, and determination never stops.
         </p>
       </div>
 
       <div
         class="col-span-1 lg:col-span-3 flex flex-col justify-center gap-6 lg:px-10 lg:border-x border-paper/10 py-4">
-        <a href="mailto:hello@Gridhik gk.com" class="flex items-center gap-4 group">
+        <a href="mailto:Gridhikgk@gmail.com" class="flex items-center gap-4 group">
           <svg class="w-5 h-5 text-paper group-hover:opacity-70 transition-opacity shrink-0" fill="none"
             stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
               d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
           </svg>
-          <span class="text-sm font-medium text-paper group-hover:opacity-70 transition-opacity">hello@Gridhik
-            gk.com</span>
+          <span
+            class="text-sm font-medium text-paper group-hover:opacity-70 transition-opacity">Gridhikgk@gmail.com</span>
         </a>
-        <a href="tel:+916383418180" class="flex items-center gap-4 group">
+        <!-- <a href="tel:+916383418180" class="flex items-center gap-4 group">
           <svg class="w-5 h-5 text-paper group-hover:opacity-70 transition-opacity shrink-0" fill="none"
             stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
               d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
           </svg>
           <span class="text-sm font-medium text-paper group-hover:opacity-70 transition-opacity">+91 63834 18180</span>
-        </a>
+        </a> -->
         <div class="flex items-center gap-4">
           <svg class="w-5 h-5 text-paper shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
@@ -881,7 +1019,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
               d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
           </svg>
-          <span class="text-sm font-medium text-paper">Chennai, India</span>
+          <span class="text-sm font-medium text-paper">Kochi, Mumbai, Dubai, Mauritius</span>
         </div>
       </div>
 
@@ -928,7 +1066,7 @@
         <a href="#home" class="hover:text-paper transition-colors">Home</a><span class="text-paper/20">|</span>
         <a href="#about" class="hover:text-paper transition-colors">About</a><span class="text-paper/20">|</span>
         <a href="#journey" class="hover:text-paper transition-colors">Journey</a><span class="text-paper/20">|</span>
-        <a href="#ventures" class="hover:text-paper transition-colors">Ventures</a><span class="text-paper/20">|</span>
+        <a href="#vision" class="hover:text-paper transition-colors">Vision</a><span class="text-paper/20">|</span>
         <a href="#insights" class="hover:text-paper transition-colors">Insights</a><span class="text-paper/20">|</span>
         <a href="#contact" class="hover:text-paper transition-colors">Contact</a>
       </div>
