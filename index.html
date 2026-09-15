@@ -79,7 +79,12 @@
 
     <!-- Drawer Header -->
     <div class="px-6 py-6 flex justify-between items-center border-b border-paper/5">
-      <span class="text-lg font-bold text-paper tracking-tight">Menu</span>
+      <!-- <span class="text-lg font-bold text-paper tracking-tight"></span> -->
+      <div class="flex flex-col">
+        <a href="#home" class="text-xl md:text-2xl font-bold text-paper tracking-tight flex items-center gap-1">
+          Gridhik GK
+        </a>
+      </div>
       <button id="close-menu-btn" class="text-paper/70 hover:text-paper focus:outline-none transition-colors"
         aria-label="Close navigation menu">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -117,7 +122,7 @@
     </div>
 
   </div>
-
+<div class="relative w-full overflow-hidden">
   <main id="home">
     <section
       class="relative min-h-screen flex flex-col justify-center px-4 md:px-8 lg:px-16 xl:px-24 pt-28 pb-20 bg-ink overflow-hidden">
@@ -669,7 +674,7 @@
             <div class="flex flex-row items-center gap-6 mb-4">
               <!-- Logo Container -->
               <div class=" shrink-0 rounded-xl  flex items-center justify-center">
-                <img src="/images/12_converted.webp" alt="713 Organisation Logo" class="w-auto h-32 object-cover" />
+                <img src="/images/12_converted.webp" alt="713 Organisation Logo" class="w-auto h-20 md:h-32 object-cover" />
               </div>
               <div>
                 <span class="text-[10px] md:text-xs font-bold text-white/50 tracking-widest uppercase mb-4 block">The
@@ -691,7 +696,7 @@
             <div class="flex flex-row items-center gap-6 mb-4">
               <!-- Logo Container -->
               <div class=" shrink-0 rounded-xl  flex items-center justify-center">
-                <img src="/images/11_converted.webp" alt="Latitude Logistics Logo" class="w-auto h-32 object-cover" />
+                <img src="/images/11_converted.webp" alt="Latitude Logistics Logo" class="w-auto h-24 md:h-32 object-cover" />
               </div>
               <div>
                 <span class="text-[10px] md:text-xs font-bold text-white/50 tracking-widest uppercase mb-4 block">Est.
@@ -715,7 +720,7 @@
               <!-- Logo Container -->
               <div class=" shrink-0 rounded-xl  flex items-center justify-center">
                 <img src="/images/1bb_converted.webp" alt="One Banking Solution Logo"
-                  class="w-auto h-32 object-cover" />
+                  class="w-auto h-24 md:h-32 object-cover" />
               </div>
               <div>
                 <span class="text-[10px] md:text-xs font-bold text-white/50 tracking-widest uppercase mb-4 block">Est.
@@ -1005,7 +1010,7 @@
       </div>
     </section>
   </main>
-
+</div>
   <footer id="contact" class="pt-20 pb-8 px-4 md:px-6 lg:px-24 bg-ink text-paper border-t border-paper/10">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 mb-20">
 
